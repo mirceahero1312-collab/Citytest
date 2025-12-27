@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Citymart – Fresh Everyday</title>
+
+    <!-- Performance -->
+    <meta name="description" content="Citymart – produse proaspete zilnic, la prețuri accesibile.">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">Citymart</div>
+
+    <nav class="nav" id="nav">
+        <a href="#products">Produse</a>
+        <a href="#locations">Locații</a>
+        <a href="#reviews">Review-uri</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Meniu">☰</button>
+</header>
+
+<section class="hero">
+    <h1>Fresh Everyday</h1>
+    <p>Produse atent selectate pentru tine</p>
+</section>
+
+<section class="products" id="products">
+    <h2>Produse Populare</h2>
+
+    <div class="product-grid">
+
+        <article class="product-card" data-product="mere">
+            <img 
+                src="images/product-apples-small.jpg"
+                srcset="images/product-apples-small.jpg 480w,
+                        images/product-apples-medium.jpg 768w,
+                        images/product-apples-large.jpg 1200w"
+                sizes="(max-width: 768px) 90vw, 300px"
+                alt="Mere roșii"
+                loading="lazy"
+            >
+            <h3>Mere Roșii</h3>
+            <p class="price">1.99 lei/kg</p>
+            <button class="review-toggle">Vezi Review-uri</button>
+
+            <!-- Reviews -->
+            <div class="reviews hidden">
+                <div class="review-list"></div>
+
+                <form class="review-form">
+                    <input type="text" placeholder="Numele tău" required>
+                    <select required>
+                        <option value="">Rating</option>
+                        <option value="5">⭐⭐⭐⭐⭐</option>
+                        <option value="4">⭐⭐⭐⭐</option>
+                        <option value="3">⭐⭐⭐</option>
+                    </select>
+                    <textarea placeholder="Părerea ta" required></textarea>
+                    <button type="submit">Adaugă review</button>
+                </form>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="locations" id="locations">
+    <h2>Locațiile noastre</h2>
+    <ul>
+        <li>📍 Calea Giulești 338B</li>
+        <li>📍 Drumul Săbăreni 12</li>
+        <li>📍 Str. Copșa Mică</li>
+    </ul>
+</section>
+
+<footer class="footer">
+    <p>© 2025 Citymart</p>
+</footer>
+
+</body>
+</html>
